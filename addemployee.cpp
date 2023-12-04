@@ -9,6 +9,7 @@ AddEmployee::AddEmployee(QWidget *parent)
     , ui(new Ui::AddEmployee)
 {
     ui->setupUi(this);
+
 }
 
 AddEmployee::~AddEmployee()
@@ -35,5 +36,4 @@ void AddEmployee::on_AddButton_clicked()
     else
         QMessageBox::critical(this, tr("error::"), qry.lastError().text());
 }
-
 

@@ -27,9 +27,6 @@ int main(int argc, char *argv[])
     QSqlQuery qry;
     if(!qry.exec(query))
         qDebug()<<"error creating table";
-
-
-
     LoginWindow w;
     w.show();
     qDebug()<<"end";

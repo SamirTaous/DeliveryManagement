@@ -1,36 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AddEmployee</class>
- <widget class="QWidget" name="AddEmployee">
+ <class>UpdateEmployee</class>
+ <widget class="QWidget" name="UpdateEmployee">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>313</width>
-    <height>292</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="AddButton">
+  <widget class="QSplitter" name="splitter_5">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>210</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>ADD</string>
-   </property>
-  </widget>
-  <widget class="QSplitter" name="splitter">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>40</y>
+     <x>80</x>
+     <y>190</y>
      <width>211</width>
      <height>22</height>
     </rect>
@@ -38,23 +25,23 @@
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
-   <widget class="QLabel" name="NameLabel">
+   <widget class="QLabel" name="PerformanceLabel">
     <property name="styleSheet">
      <string notr="true">QLabel{
 font-size: 10px;
 }</string>
     </property>
     <property name="text">
-     <string>Name:</string>
+     <string>Performance:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="NameLineEdit"/>
+   <widget class="QLineEdit" name="PerformanceLineEdit"/>
   </widget>
   <widget class="QSplitter" name="splitter_2">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>70</y>
+     <x>80</x>
+     <y>100</y>
      <width>211</width>
      <height>22</height>
     </rect>
@@ -74,11 +61,35 @@ font-size: 10px;
    </widget>
    <widget class="QLineEdit" name="ContactLineEdit"/>
   </widget>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>70</y>
+     <width>211</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <widget class="QLabel" name="NameLabel">
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font-size: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Name:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="NameLineEdit"/>
+  </widget>
   <widget class="QSplitter" name="splitter_3">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>100</y>
+     <x>80</x>
+     <y>130</y>
      <width>211</width>
      <height>22</height>
     </rect>
@@ -101,8 +112,8 @@ font-size: 10px;
   <widget class="QSplitter" name="splitter_4">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>130</y>
+     <x>80</x>
+     <y>160</y>
      <width>211</width>
      <height>22</height>
     </rect>
@@ -122,42 +133,45 @@ font-size: 10px;
    </widget>
    <widget class="QLineEdit" name="HoursLineEdit"/>
   </widget>
-  <widget class="QSplitter" name="splitter_5">
+  <widget class="QPushButton" name="UpdateButton">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>160</y>
-     <width>211</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <widget class="QLabel" name="PerformanceLabel">
-    <property name="styleSheet">
-     <string notr="true">QLabel{
-font-size: 10px;
-}</string>
-    </property>
-    <property name="text">
-     <string>Performance:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="PerformanceLineEdit"/>
-  </widget>
-  <widget class="QPushButton" name="BackButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>260</y>
-     <width>80</width>
-     <height>18</height>
+     <x>190</x>
+     <y>240</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Go Back</string>
+    <string>Update</string>
    </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>81</x>
+     <y>41</y>
+     <width>51</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="IDLabel">
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font-size: 10px;
+}</string>
+      </property>
+      <property name="text">
+       <string>ID:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="IDLineEdit"/>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

@@ -10,24 +10,30 @@ CONFIG += c++17
 
 SOURCES += \
     addemployee.cpp \
+    deleteemployee.cpp \
     employe.cpp \
     employewidget.cpp \
     main.cpp \
     loginwindow.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    updateemployee.cpp
 
 HEADERS += \
     addemployee.h \
+    deleteemployee.h \
     employe.h \
     employewidget.h \
     loginwindow.h \
-    mainwindow.h
+    mainwindow.h \
+    updateemployee.h
 
 FORMS += \
     addemployee.ui \
+    deleteemployee.ui \
     employewidget.ui \
     loginwindow.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    updateemployee.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

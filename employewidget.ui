@@ -16,10 +16,10 @@
   <widget class="QPushButton" name="AddEmployeeButton">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>30</y>
-     <width>161</width>
-     <height>61</height>
+     <x>30</x>
+     <y>260</y>
+     <width>91</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -28,43 +28,66 @@ font-size: 10px
 }</string>
    </property>
    <property name="text">
-    <string>ADD/UPDATE EMPLOYEE</string>
+    <string>Add Employee</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="DeleteEmployeeButton">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>190</y>
-     <width>161</width>
-     <height>61</height>
+     <x>270</x>
+     <y>260</y>
+     <width>91</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-font-size: 20px
-}</string>
-   </property>
-   <property name="text">
-    <string>Show Employees</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>110</y>
-     <width>161</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton{
-font-size: 20px
+font-size: 10px
 }</string>
    </property>
    <property name="text">
     <string>Delete Employee</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="UpdateEmployeButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>260</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+font-size: 10px
+}</string>
+   </property>
+   <property name="text">
+    <string>Update Employee</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="EmployeeTable">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>331</width>
+     <height>221</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LoadTableButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>240</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load</string>
    </property>
   </widget>
  </widget>
