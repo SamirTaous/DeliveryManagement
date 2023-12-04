@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,9 +15,6 @@ SOURCES += \
     main.cpp \
     loginwindow.cpp \
     mainwindow.cpp
-    mainwindow.cpp
-    employewidget.cpp
-    addemployee.cpp
 
 HEADERS += \
     addemployee.h \
@@ -25,18 +22,12 @@ HEADERS += \
     employewidget.h \
     loginwindow.h \
     mainwindow.h
-    mainwindow.h
-    employewidget.h
-    addemployee.h
 
 FORMS += \
     addemployee.ui \
     employewidget.ui \
     loginwindow.ui \
     mainwindow.ui
-    mainwindow.ui
-    employewidget.ui
-    addemployee.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="UpdateButton">
+  <widget class="QPushButton" name="AddButton">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>UPDATE</string>
+    <string>ADD</string>
    </property>
   </widget>
   <widget class="QSplitter" name="splitter">

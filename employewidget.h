@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "addemployee.h"
 #include "employe.h"
+
 namespace Ui {
 class employewidget;
 }

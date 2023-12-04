@@ -15,6 +15,9 @@ public:
     explicit AddEmployee(QWidget *parent = nullptr);
     ~AddEmployee();
 
+private slots:
+    void on_AddButton_clicked();
+
 private:
     Ui::AddEmployee *ui;
 };

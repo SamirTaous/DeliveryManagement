@@ -1,6 +1,6 @@
 #ifndef EMPLOYE_H
 #define EMPLOYE_H
-
+#include <QString>
 #include <string>
 
 class Employe {
@@ -14,8 +14,11 @@ class Employe {
 
 public:
     Employe(std::string _nom, std::string _contact="--", std::string _role="--", int _heures=0, int _performance=0);
+    Employe(const QString& _name,const QString& _contact,const QString& _role,int _heures,int _performance);
+
     ~Employe();
 
+    void set_name(std::string);
     void set_contact(std::string);
     void set_role(std::string);
     void set_heures(int);

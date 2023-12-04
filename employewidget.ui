@@ -24,11 +24,11 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-font-size: 20px
+font-size: 10px
 }</string>
    </property>
    <property name="text">
-    <string>Add Employee</string>
+    <string>ADD/UPDATE EMPLOYEE</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">

@@ -1,6 +1,4 @@
 #include "employe.h"
-
-#include "employe.h"
 #include <iostream>
 
 int Employe::nb_employes = 0;
@@ -10,10 +8,18 @@ Employe::Employe(std::string _nom, std::string _contact, std::string _role, int 
     IDemploye = ++nb_employes;
 }
 
+Employe::Employe(const QString& _name, const QString& _contact, const QString& _role, int _heures, int _performance)
+    : nom(_name.toStdString()), contact(_contact.toStdString()), role(_role.toStdString()), heures(_heures), performance(_performance) {
+    IDemploye = ++nb_employes;
+}
+
 Employe::~Employe() {
     nb_employes--;
 }
 
+void Employe::set_name(std::string _name) {
+    nom = _name;
+}
 void Employe::set_contact(std::string _contact) {
     contact = _contact;
 }
