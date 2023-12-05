@@ -14,6 +14,7 @@ class AddEmployee : public QWidget
 public:
     explicit AddEmployee(QWidget *parent = nullptr);
     ~AddEmployee();
+    int id_number();
 
 private slots:
     void on_AddButton_clicked();

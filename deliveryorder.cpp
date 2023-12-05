@@ -4,7 +4,7 @@
 #include <vector>
 #include "orderitem.h"
 
-DeliveryOrder::DeliveryOrder(int _orderID,const std::string& _customerInfo,const std::string& _deliveryAddress,const std::vector<OrderItem>& _orderItems,const std::string& _deliveryStatus)
+DeliveryOrder::DeliveryOrder(int _orderID,const std::string& _customerInfo,const std::string& _deliveryAddress,const int _orderItems,const std::string& _deliveryStatus)
     : orderID{_orderID},customerInfo{_customerInfo},deliveryAddress{_deliveryAddress},orderItems{_orderItems},deliveryStatus{_deliveryStatus} {}
 
 void DeliveryOrder::setOrderID(int _orderID){
@@ -29,10 +29,10 @@ std::string DeliveryOrder::getDeliveryAddress() const{
     return deliveryAddress;
 }
 
-void DeliveryOrder::setOrderItems(const std::vector<OrderItem>& _orderItems){
+void DeliveryOrder::setOrderItems(const int _orderItems){
     orderItems=_orderItems;
 }
-std::vector<OrderItem> DeliveryOrder::getOrderItems() const{
+int DeliveryOrder::getOrderItems() const{
     return orderItems;
 }
 

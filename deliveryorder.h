@@ -10,12 +10,12 @@ class DeliveryOrder
     int orderID;
     std::string customerInfo;
     std::string deliveryAddress;
-    std::vector<OrderItem> orderItems;
+    int orderItems;
     std::string deliveryStatus;
 
 
 public:
-    DeliveryOrder(int _orderID,const std::string& _customerInfo,const std::string& deliveryAddress,const std::vector<OrderItem>& _orderItems,const std::string& _deliveryStatus);
+    DeliveryOrder(int _orderID,const std::string& _customerInfo,const std::string& deliveryAddress,const int itemCount,const std::string& _deliveryStatus);
 
     void setOrderID(int _orderID);
     int getOrderID() const;
@@ -26,8 +26,8 @@ public:
     void setDeliveryAddress(const std::string& _deliveryAddress);
     std::string getDeliveryAddress() const;
 
-    void setOrderItems(const std::vector<OrderItem>& _orderItems);
-    std::vector<OrderItem> getOrderItems() const;
+    void setOrderItems(const int _orderItems);
+    int getOrderItems() const;
 
     void setDeliveryStatus(const std::string& _deliveryStatus);
     std::string getDeliveryStatus() const;
