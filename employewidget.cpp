@@ -48,7 +48,7 @@ void employewidget::on_LoadTableButton_clicked()
     QSqlQuery qry;
     qry.prepare("SELECT * FROM employee");
     qry.exec();
-    if (qry.exec("SELECT * FROM employe")) {
+    if (qry.exec("SELECT * FROM employee")) {
         qDebug() << "Query executed successfully";
     } else {
         qDebug() << "Query failed:" << qry.lastError().text();

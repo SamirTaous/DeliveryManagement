@@ -3,6 +3,7 @@
 #include <QtSql>
 #include <QMainWindow>
 #include "employewidget.h"
+#include "deliverywidget.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -20,7 +21,11 @@ public:
 private slots:
     void on_EmployeButton_clicked();
 
+    void on_DeliveryButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    deliverywidget* DeliveryWidget;
+
 };
 #endif // MAINWINDOW_H
