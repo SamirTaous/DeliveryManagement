@@ -13,6 +13,37 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#AddEmployee {
+    background-color: #f5f5f5;
+}
+
+QPushButton#AddButton,
+QPushButton#BackButton {
+    font-size: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+QPushButton#AddButton:hover,
+QPushButton#BackButton:hover {
+    background-color: #2980b9;
+}
+
+QLabel {
+    font-size: 10px;
+}
+
+QLineEdit {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+</string>
+  </property>
   <widget class="QPushButton" name="AddButton">
    <property name="geometry">
     <rect>
@@ -32,7 +63,7 @@
      <x>40</x>
      <y>40</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -40,9 +71,7 @@
    </property>
    <widget class="QLabel" name="NameLabel">
     <property name="styleSheet">
-     <string notr="true">QLabel{
-font-size: 10px;
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Name:</string>
@@ -56,7 +85,7 @@ font-size: 10px;
      <x>40</x>
      <y>70</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -80,7 +109,7 @@ font-size: 10px;
      <x>40</x>
      <y>100</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -104,7 +133,7 @@ font-size: 10px;
      <x>40</x>
      <y>130</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -128,7 +157,7 @@ font-size: 10px;
      <x>40</x>
      <y>160</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -145,19 +174,6 @@ font-size: 10px;
     </property>
    </widget>
    <widget class="QLineEdit" name="PerformanceLineEdit"/>
-  </widget>
-  <widget class="QPushButton" name="BackButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>260</y>
-     <width>80</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Go Back</string>
-   </property>
   </widget>
  </widget>
  <resources/>

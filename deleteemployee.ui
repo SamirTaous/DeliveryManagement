@@ -13,6 +13,35 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#DeleteEmployee {
+    background-color: #f5f5f5;
+}
+
+QPushButton#DeleteButton {
+    background-color: red;
+    font-size: 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+QPushButton#DeleteButton:hover {
+    background-color: darkred;
+}
+
+QLabel {
+    font-size: 10px;
+}
+
+QLineEdit {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+</string>
+  </property>
   <widget class="QPushButton" name="DeleteButton">
    <property name="geometry">
     <rect>
@@ -23,17 +52,13 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-background-color: red;
-font-size: 20px;
-color: black;
-}</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>DELETE</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>80</x>

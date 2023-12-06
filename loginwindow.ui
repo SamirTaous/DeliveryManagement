@@ -6,32 +6,74 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>455</width>
-    <height>189</height>
+    <width>465</width>
+    <height>266</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget#LoginWindow {
+    background-color: #f5f5f5; 
+}
+
+
+QGroupBox#Login {
+    background-color: #ffffff; 
+    border: 1px solid #dcdcdc; 
+    border-radius: 5px;
+}
+
+
+QPushButton#LoginButton {
+    font-size: 15px;
+    background-color: #3498db; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+}
+
+QPushButton#LoginButton:hover {
+    background-color: #2980b9; 
+}
+
+
+
+QLineEdit {
+    border: 1px solid #dcdcdc; 
+    border-radius: 3px;
+    padding: 6px;
+}
+
+
+QHBoxLayout QLabel {
+    font-size: 12px;
+    color: #666666;
+}
+</string>
   </property>
   <widget class="QGroupBox" name="Login">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>0</x>
      <y>0</y>
-     <width>261</width>
-     <height>181</height>
+     <width>471</width>
+     <height>261</height>
     </rect>
    </property>
    <property name="title">
-    <string>Sign in</string>
+    <string/>
    </property>
    <widget class="QPushButton" name="LoginButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>130</y>
-      <width>201</width>
-      <height>26</height>
+      <x>150</x>
+      <y>150</y>
+      <width>181</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -43,12 +85,12 @@ font-size: 15px
      <string>Login</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>40</y>
-      <width>201</width>
+      <x>80</x>
+      <y>60</y>
+      <width>281</width>
       <height>41</height>
      </rect>
     </property>
@@ -65,12 +107,12 @@ font-size: 15px
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>80</y>
-      <width>201</width>
+      <x>80</x>
+      <y>100</y>
+      <width>281</width>
       <height>41</height>
      </rect>
     </property>
@@ -91,19 +133,6 @@ font-size: 15px
      </item>
     </layout>
    </widget>
-  </widget>
-  <widget class="QLabel" name="ImageLabel">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>40</y>
-     <width>111</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
   </widget>
  </widget>
  <resources/>

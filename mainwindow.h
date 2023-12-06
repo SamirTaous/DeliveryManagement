@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "employewidget.h"
 #include "deliverywidget.h"
+#include "inventorywidget.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -20,12 +21,16 @@ public:
 
 private slots:
     void on_EmployeButton_clicked();
-
+    void showTime();
     void on_DeliveryButton_clicked();
+
+    void on_InventoryButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     deliverywidget* DeliveryWidget;
+    employewidget* EmployeWidget;
+    InventoryWidget* inventorywidget;
 
 };
 #endif // MAINWINDOW_H

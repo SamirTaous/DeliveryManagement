@@ -13,6 +13,34 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#AddDelivery {
+    background-color: #f0f0f0;
+}
+
+QLabel {
+    font-size: 10px;
+}
+
+QLineEdit, QTableView {
+    background-color: #ffffff;
+    border: 1px solid #bcbcbc;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+QPushButton {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+</string>
+  </property>
   <widget class="QLabel" name="OrderIDLabel">
    <property name="geometry">
     <rect>
@@ -109,7 +137,7 @@ font-size: 10px;
      <x>70</x>
      <y>200</y>
      <width>31</width>
-     <height>20</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -119,7 +147,7 @@ font-size: 10px;
      <x>70</x>
      <y>230</y>
      <width>31</width>
-     <height>20</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -129,7 +157,7 @@ font-size: 10px;
      <x>70</x>
      <y>260</y>
      <width>31</width>
-     <height>20</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -139,7 +167,7 @@ font-size: 10px;
      <x>230</x>
      <y>250</y>
      <width>151</width>
-     <height>20</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -149,7 +177,7 @@ font-size: 10px;
      <x>230</x>
      <y>220</y>
      <width>151</width>
-     <height>20</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -169,7 +197,7 @@ font-size: 10px;
      <x>345</x>
      <y>192</y>
      <width>41</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -182,7 +210,7 @@ font-size: 10px;
      <x>230</x>
      <y>192</y>
      <width>111</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">

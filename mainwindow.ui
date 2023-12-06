@@ -7,26 +7,86 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#centralwidget {
+    background-color: #f5f5f5;
+}
+
+QPushButton#EmployeButton,
+QPushButton#InventoryButton,
+QPushButton#DeliveryButton {
+    font-size: 28px;
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+QPushButton#EmployeButton:hover,
+QPushButton#InventoryButton:hover,
+QPushButton#DeliveryButton:hover {
+    background-color: #2980b9;
+}
+
+QLabel#ClockLabel {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: bold; 
+    font-style: italic; 
+}
+
+QLabel#MainBackground {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.9;
+    filter: blur(8px);
+}
+
+QMainWindow#MainWindow {
+    background-color: #f5f5f5;
+}
+
+QMenuBar#menubar {
+    background-color: #3498db;
+    color: white;
+}
+
+QStatusBar#statusbar {
+    background-color: #3498db;
+    color: white;
+}
+
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QPushButton" name="EmployeButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>30</y>
-      <width>191</width>
-      <height>51</height>
+      <x>260</x>
+      <y>290</y>
+      <width>301</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-font-size: 20px
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Manage Employees</string>
@@ -35,19 +95,63 @@ font-size: 20px
    <widget class="QPushButton" name="DeliveryButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>100</y>
-      <width>191</width>
-      <height>51</height>
+      <x>260</x>
+      <y>380</y>
+      <width>301</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-font-size: 20px
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Manage Deliveries</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ClockLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>401</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>-1</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Clock</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="InventoryButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>470</y>
+      <width>301</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Inventory</string>
     </property>
    </widget>
   </widget>

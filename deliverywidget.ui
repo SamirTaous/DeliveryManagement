@@ -13,6 +13,46 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#deliverywidget {
+    background-color: #f5f5f5;
+}
+
+QTableView#DeliveryTable {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+
+QPushButton#AddDeliveryButton,
+QPushButton#DeleteDeliveryButton,
+QPushButton#LoadDeliveryTable {
+    font-size: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+QPushButton#AddDeliveryButton:hover,
+QPushButton#DeleteDeliveryButton:hover,
+QPushButton#LoadDeliveryTable:hover {
+    background-color: #2980b9;
+}
+
+QLineEdit#OrderIDLineEdit {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+
+QLabel#OrderIDLabel {
+    font-size: 12px;
+}
+
+</string>
+  </property>
   <widget class="QTableView" name="DeliveryTable">
    <property name="geometry">
     <rect>
@@ -75,9 +115,9 @@
   <widget class="QLabel" name="OrderIDLabel">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>200</x>
      <y>260</y>
-     <width>41</width>
+     <width>51</width>
      <height>21</height>
     </rect>
    </property>

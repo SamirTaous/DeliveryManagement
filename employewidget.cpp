@@ -21,14 +21,14 @@ employewidget::~employewidget()
 void employewidget::on_AddEmployeeButton_clicked()
 {
     addemployee= new AddEmployee;
-    this->hide();
+    //this->hide();
     addemployee->show();
 }
 
 void employewidget::on_UpdateEmployeButton_clicked()
 {
     updateemployee= new UpdateEmployee;
-    this->hide();
+    //this->hide();
     updateemployee->show();
 }
 
@@ -46,9 +46,9 @@ void employewidget::on_LoadTableButton_clicked()
     QSqlQueryModel *modal=new QSqlQueryModel();
 
     QSqlQuery qry;
-    qry.prepare("SELECT * FROM employe");
+    qry.prepare("SELECT id AS Employee_ID,name AS Employee_Name,contact AS Contact,role AS Role,hours AS Hours,performance AS Performance FROM employe ORDER BY id ASC");
     qry.exec();
-    if (qry.exec("SELECT * FROM employe")) {
+    if (qry.exec("SELECT id AS Employee_ID,name AS Employee_Name,contact AS Contact,role AS Role,hours AS Hours,performance AS Performance FROM employe ORDER BY id ASC")) {
         qDebug() << "Query executed successfully";
     } else {
         qDebug() << "Query failed:" << qry.lastError().text();

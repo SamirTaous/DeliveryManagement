@@ -16,6 +16,7 @@ SOURCES += \
     deliverywidget.cpp \
     employe.cpp \
     employewidget.cpp \
+    inventorywidget.cpp \
     main.cpp \
     loginwindow.cpp \
     mainwindow.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     deliverywidget.h \
     employe.h \
     employewidget.h \
+    inventorywidget.h \
     loginwindow.h \
     mainwindow.h \
     orderitem.h \
@@ -41,6 +43,7 @@ FORMS += \
     deleteemployee.ui \
     deliverywidget.ui \
     employewidget.ui \
+    inventorywidget.ui \
     loginwindow.ui \
     mainwindow.ui \
     updateemployee.ui

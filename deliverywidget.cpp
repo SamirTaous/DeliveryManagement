@@ -23,9 +23,9 @@ void deliverywidget::on_LoadDeliveryTable_clicked()
     QSqlQueryModel *modal=new QSqlQueryModel();
 
     QSqlQuery qry;
-    qry.prepare("SELECT * FROM delivery");
+    qry.prepare("SELECT orderid AS Order_ID, prodid AS Product_ID, itemcount AS Amount, customerinfo AS Customer_Information, address AS Delivery_Address, status AS Delivery_Status FROM delivery ORDER BY orderid ASC");
     qry.exec();
-    if (qry.exec("SELECT * FROM delivery")) {
+    if (qry.exec("SELECT orderid AS Order_ID, prodid AS Product_ID, itemcount AS Amount, customerinfo AS Customer_Information, address AS Delivery_Address, status AS Delivery_Status FROM delivery ORDER BY orderid ASC")) {
         qDebug() << "Query executed successfully";
     } else {
         qDebug() << "Query failed:" << qry.lastError().text();

@@ -13,13 +13,44 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#UpdateEmployee {
+    background-color: #f5f5f5;
+}
+
+QPushButton#UpdateButton {
+    background-color: #3498db;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+QPushButton#UpdateButton:hover {
+    background-color: #2980b9;
+}
+
+QLabel {
+    font-size: 10px;
+}
+
+QLineEdit {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+
+</string>
+  </property>
   <widget class="QSplitter" name="splitter_5">
    <property name="geometry">
     <rect>
      <x>80</x>
      <y>190</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -43,7 +74,7 @@ font-size: 10px;
      <x>80</x>
      <y>100</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -67,7 +98,7 @@ font-size: 10px;
      <x>80</x>
      <y>70</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -75,9 +106,7 @@ font-size: 10px;
    </property>
    <widget class="QLabel" name="NameLabel">
     <property name="styleSheet">
-     <string notr="true">QLabel{
-font-size: 10px;
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Name:</string>
@@ -91,7 +120,7 @@ font-size: 10px;
      <x>80</x>
      <y>130</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -115,7 +144,7 @@ font-size: 10px;
      <x>80</x>
      <y>160</y>
      <width>211</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <property name="orientation">
@@ -138,7 +167,7 @@ font-size: 10px;
     <rect>
      <x>190</x>
      <y>240</y>
-     <width>91</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -146,13 +175,13 @@ font-size: 10px;
     <string>Update</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>81</x>
      <y>41</y>
-     <width>51</width>
-     <height>24</height>
+     <width>52</width>
+     <height>30</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">

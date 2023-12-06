@@ -9,8 +9,8 @@ LoginWindow::LoginWindow(QWidget *parent)
     , ui(new Ui::LoginWindow)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/HP/Downloads/login_image.png");
-    ui->ImageLabel->setPixmap(pix.scaled(111,111,Qt::KeepAspectRatio));
+    //QPixmap pix("C:/Users/HP/Downloads/login_image.jpg");
+    //ui->ImageLabel->setPixmap(pix.scaled(481,281,Qt::KeepAspectRatio));
 }
 
 LoginWindow::~LoginWindow()
