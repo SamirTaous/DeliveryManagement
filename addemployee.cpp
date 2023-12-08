@@ -10,6 +10,8 @@ AddEmployee::AddEmployee(QWidget *parent)
     , ui(new Ui::AddEmployee)
 {
     ui->setupUi(this);
+    QIcon icon("C:/Users/HP/Downloads/windowicon.png");
+    setWindowIcon(icon);
 
 }
 
@@ -30,8 +32,10 @@ void AddEmployee::on_AddButton_clicked()
                 + QString::number(x.getHeures()) + "','"
                 + QString::number(x.getPerformance()) + "')");
 
-    if (qry.exec())
+    if (qry.exec()){
         QMessageBox::critical(this, tr("Save"), tr("Saved"));
+        this->close();
+    }
     else
         QMessageBox::critical(this, tr("error::"), qry.lastError().text());
 }

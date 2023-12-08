@@ -8,6 +8,20 @@ InventoryWidget::InventoryWidget(QWidget *parent)
     , ui(new Ui::InventoryWidget)
 {
     ui->setupUi(this);
+    QIcon icon("C:/Users/HP/Downloads/windowicon.png");
+    setWindowIcon(icon);
+    QSqlQueryModel *modal=new QSqlQueryModel();
+    QSqlQuery qry;
+    qry.prepare("SELECT product.prodid AS ID_Produit, COALESCE(product.prodcount - SUM(itemcount), product.prodcount) AS Stock FROM product LEFT JOIN delivery ON product.prodid = delivery.prodid GROUP BY product.prodid ORDER BY product.prodid ASC;");
+    qry.exec();
+    if (qry.exec("SELECT product.prodid AS ID_Produit, COALESCE(product.prodcount - SUM(itemcount), product.prodcount) AS Stock FROM product LEFT JOIN delivery ON product.prodid = delivery.prodid GROUP BY product.prodid ORDER BY product.prodid ASC;")) {
+        qDebug() << "Query executed successfully";
+    } else {
+        qDebug() << "Query failed:" << qry.lastError().text();
+    }
+
+    modal->setQuery(qry);
+    ui->InventoryTable->setModel(modal);
 }
 
 InventoryWidget::~InventoryWidget()
@@ -42,8 +56,10 @@ void InventoryWidget::on_AddProductButton_clicked()
                 + QString::number(productID) + "','"
                 + QString::number(amount) + "')");
 
-    if (qry.exec())
+    if (qry.exec()){
         QMessageBox::critical(this, tr("Save"), tr("Saved"));
+        this->close();
+    }
     else
         QMessageBox::critical(this, tr("error::"), tr("Product ID exists!"));
 }

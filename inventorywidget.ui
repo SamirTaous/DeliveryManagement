@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>572</width>
     <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Express Delivery</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#InventoryWidget {
@@ -28,10 +28,10 @@ QPushButton#LoadButton,
 QPushButton#AddProductButton,
 QPushButton#DeleteProductButton {
     font-size: 12px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent;
+    color: #2c3e50;
+    border: 1px solid #2c3e50; 
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -48,7 +48,7 @@ QPushButton#DeleteProductButton:hover {
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>381</width>
+     <width>551</width>
      <height>211</height>
     </rect>
    </property>
@@ -69,46 +69,46 @@ QPushButton#DeleteProductButton:hover {
   <widget class="QPushButton" name="AddProductButton">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>400</x>
      <y>220</y>
-     <width>80</width>
+     <width>161</width>
      <height>18</height>
     </rect>
    </property>
    <property name="text">
-    <string>Add Product</string>
+    <string>Ajouter Produit</string>
    </property>
   </widget>
   <widget class="QLabel" name="ProductIDLabel">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>470</x>
      <y>250</y>
-     <width>61</width>
+     <width>71</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Product ID:</string>
+    <string>N° Produit:</string>
    </property>
   </widget>
   <widget class="QLabel" name="AmountLabel">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>470</x>
      <y>270</y>
-     <width>61</width>
+     <width>71</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Amount:</string>
+    <string>NB de produits:</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="ProductIDLineEdit">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>540</x>
      <y>250</y>
      <width>21</width>
      <height>20</height>
@@ -118,7 +118,7 @@ QPushButton#DeleteProductButton:hover {
   <widget class="QLineEdit" name="AmountLineEdit">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>540</x>
      <y>270</y>
      <width>20</width>
      <height>20</height>
@@ -153,12 +153,12 @@ QPushButton#DeleteProductButton:hover {
     <rect>
      <x>100</x>
      <y>260</y>
-     <width>91</width>
+     <width>141</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Delete Product</string>
+    <string>Supprimer Produit</string>
    </property>
   </widget>
  </widget>

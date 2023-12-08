@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>570</width>
     <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Express Delivery</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog#employewidget {
@@ -24,10 +24,10 @@ QPushButton#UpdateEmployeButton,
 QPushButton#LoadTableButton {
     font-size: 11px;
     padding: 0px 5px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent;
+    color: #2c3e50;
+    border: 1px solid #2c3e50; 
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -40,18 +40,19 @@ QPushButton#LoadTableButton:hover {
 }
 
 QTableView#EmployeeTable {
-    background-color: #ffffff;
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
+    background-color: transparent;
+    color: #2c3e50;
+    border: 1px solid #2c3e50; 
+    border-radius: 8px;
 }
 </string>
   </property>
   <widget class="QPushButton" name="AddEmployeeButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>260</y>
-     <width>121</width>
+     <width>171</width>
      <height>31</height>
     </rect>
    </property>
@@ -59,15 +60,15 @@ QTableView#EmployeeTable {
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Add Employee</string>
+    <string>Ajouter Employé</string>
    </property>
   </widget>
   <widget class="QPushButton" name="DeleteEmployeeButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>390</x>
      <y>260</y>
-     <width>121</width>
+     <width>171</width>
      <height>31</height>
     </rect>
    </property>
@@ -75,15 +76,15 @@ QTableView#EmployeeTable {
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Delete Employee</string>
+    <string>Supprimer Employé</string>
    </property>
   </widget>
   <widget class="QPushButton" name="UpdateEmployeButton">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>190</x>
      <y>260</y>
-     <width>111</width>
+     <width>191</width>
      <height>31</height>
     </rect>
    </property>
@@ -91,15 +92,15 @@ QTableView#EmployeeTable {
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Update Employee</string>
+    <string>Mettre à jour Employé</string>
    </property>
   </widget>
   <widget class="QTableView" name="EmployeeTable">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>20</y>
-     <width>331</width>
+     <width>551</width>
      <height>221</height>
     </rect>
    </property>
@@ -107,7 +108,7 @@ QTableView#EmployeeTable {
   <widget class="QPushButton" name="LoadTableButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>240</y>
      <width>41</width>
      <height>16</height>

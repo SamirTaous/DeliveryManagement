@@ -9,6 +9,8 @@ DeleteEmployee::DeleteEmployee(QWidget *parent)
     , ui(new Ui::DeleteEmployee)
 {
     ui->setupUi(this);
+    QIcon icon("C:/Users/HP/Downloads/windowicon.png");
+    setWindowIcon(icon);
 }
 
 DeleteEmployee::~DeleteEmployee()

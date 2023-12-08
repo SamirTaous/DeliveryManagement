@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>800</height>
+    <width>1280</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Express Delivery</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#centralwidget {
@@ -20,25 +20,33 @@
 
 QPushButton#EmployeButton,
 QPushButton#InventoryButton,
-QPushButton#DeliveryButton {
-    font-size: 28px;
+QPushButton#DeliveryButton,
+QPushButton#AddLoginButton,
+QPushButton#OverviewButton {
+    font-size: 30px;
     padding: 15px 30px;
-    background-color: #3498db;
-    color: white;
-    border: none;
+    background-color: transparent;
+    color: #2c3e50;
+    border: 1px solid #2c3e50; 
     border-radius: 8px;
     cursor: pointer;
+    text-align: right;
     transition: background-color 0.3s;
 }
 
+QLabel#DeliveryImage:hover,
+QLabel#EmployeeImage:hover,
+QLabel#InventoryImage:hover,
 QPushButton#EmployeButton:hover,
 QPushButton#InventoryButton:hover,
-QPushButton#DeliveryButton:hover {
-    background-color: #2980b9;
+QPushButton#DeliveryButton:hover,
+QPushButton#AddLoginButton:hover,
+QPushButton#OverviewButton:hover {
+    background-color: #AE1B1B;
 }
 
 QLabel#ClockLabel {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
     font-size: 60px;
     color: #2c3e50;
     text-align: center;
@@ -61,12 +69,12 @@ QMainWindow#MainWindow {
 }
 
 QMenuBar#menubar {
-    background-color: #3498db;
+    background-color: transparent;
     color: white;
 }
 
 QStatusBar#statusbar {
-    background-color: #3498db;
+    background-color: transparent;
     color: white;
 }
 
@@ -74,59 +82,90 @@ QStatusBar#statusbar {
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">
+QLabel{
+background:none;
+}</string>
    </property>
    <widget class="QPushButton" name="EmployeButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>290</y>
+      <x>770</x>
+      <y>250</y>
       <width>301</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
     </property>
     <property name="text">
-     <string>Manage Employees</string>
+     <string>Gérer les employés</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="DeliveryButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>380</y>
+      <x>770</x>
+      <y>340</y>
       <width>301</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
     </property>
     <property name="text">
-     <string>Manage Deliveries</string>
+     <string>                                                  Gérer les commandes</string>
     </property>
    </widget>
    <widget class="QLabel" name="ClockLabel">
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>20</y>
+      <y>160</y>
       <width>401</width>
       <height>161</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI</family>
+      <family>System</family>
       <pointsize>-1</pointsize>
       <italic>true</italic>
       <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="text">
      <string>Clock</string>
@@ -141,9 +180,99 @@ QStatusBar#statusbar {
    <widget class="QPushButton" name="InventoryButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>470</y>
+      <x>770</x>
+      <y>430</y>
       <width>301</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Inventaire                  </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ExpressDeliveryImage">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>-30</y>
+      <width>666</width>
+      <height>375</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roman</family>
+      <pointsize>-1</pointsize>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    font-size: 60px;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: bold; 
+    font-style: italic; 
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="EmployeeImage">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>260</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DeliveryImage">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>330</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+background:none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="InventoryImage">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>430</y>
+      <width>71</width>
       <height>71</height>
      </rect>
     </property>
@@ -151,21 +280,209 @@ QStatusBar#statusbar {
      <string notr="true"/>
     </property>
     <property name="text">
-     <string>Inventory</string>
+     <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="BackgroundImage">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AddLoginButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>370</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Ajouter un utilisateur</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RootLabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>330</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font-size:15px;
+color: #2c3e50;
+}</string>
+    </property>
+    <property name="text">
+     <string>Mot de passe ROOT:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="PasswordLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>329</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+background-color: transparent;
+    color: #2c3e50;
+    border: 1px solid #2c3e50; 
+    border-radius: 8px;
+}</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="OverviewButton">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>160</y>
+      <width>301</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Aperçu                        </string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="OverviewImage">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>170</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="WelcomeLabel">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>50</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font-size:30px;
+color: #2c3e50;
+}</string>
+    </property>
+    <property name="text">
+     <string>Bienvenue,</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="Welcometext">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>70</y>
+      <width>251</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <zorder>BackgroundImage</zorder>
+   <zorder>EmployeButton</zorder>
+   <zorder>DeliveryButton</zorder>
+   <zorder>ClockLabel</zorder>
+   <zorder>InventoryButton</zorder>
+   <zorder>ExpressDeliveryImage</zorder>
+   <zorder>DeliveryImage</zorder>
+   <zorder>EmployeeImage</zorder>
+   <zorder>InventoryImage</zorder>
+   <zorder>AddLoginButton</zorder>
+   <zorder>RootLabel</zorder>
+   <zorder>PasswordLineEdit</zorder>
+   <zorder>OverviewButton</zorder>
+   <zorder>OverviewImage</zorder>
+   <zorder>WelcomeLabel</zorder>
+   <zorder>Welcometext</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1280</width>
      <height>17</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

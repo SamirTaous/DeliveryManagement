@@ -11,6 +11,15 @@ employewidget::employewidget(QWidget *parent) :
     ui(new Ui::employewidget)
 {
     ui->setupUi(this);
+    QIcon icon("C:/Users/HP/Downloads/windowicon.png");
+    setWindowIcon(icon);
+    QSqlQueryModel *modal=new QSqlQueryModel();
+
+    QSqlQuery qry;
+    qry.prepare("SELECT id AS Employee_ID,name AS Employee_Name,contact AS Contact,role AS Role,hours AS Hours,performance AS Performance FROM employe ORDER BY id ASC");
+    qry.exec();
+    modal->setQuery(qry);
+    ui->EmployeeTable->setModel(modal);
     }
 
 employewidget::~employewidget()

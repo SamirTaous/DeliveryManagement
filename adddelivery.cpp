@@ -9,6 +9,19 @@ AddDelivery::AddDelivery(QWidget *parent)
     , ui(new Ui::AddDelivery)
 {
     ui->setupUi(this);
+    QIcon icon("C:/Users/HP/Downloads/windowicon.png");
+    setWindowIcon(icon);
+    QSqlQueryModel *modal=new QSqlQueryModel();
+    QSqlQuery qry;
+    qry.prepare("SELECT orderid AS Order_ID, prodid AS Product_ID, itemcount AS Amount, customerinfo AS Customer_Information, address AS Delivery_Address, status AS Delivery_Status FROM delivery ORDER BY orderid ASC");
+    qry.exec();
+    if (qry.exec("SELECT orderid AS Order_ID, prodid AS Product_ID, itemcount AS Amount, customerinfo AS Customer_Information, address AS Delivery_Address, status AS Delivery_Status FROM delivery ORDER BY orderid ASC")) {
+        qDebug() << "Query executed successfully";
+    } else {
+        qDebug() << "Query failed:" << qry.lastError().text();
+    }
+    modal->setQuery(qry);
+    ui->tableView->setModel(modal);
 }
 
 AddDelivery::~AddDelivery()
@@ -44,8 +57,10 @@ void AddDelivery::on_AddDeliveryButton_clicked()
                 + QString::number(deliveryorder.getOrderItems())+"','"
                 + QString::fromStdString(deliveryorder.getCustomerInfo()) +"','"
                 + QString::fromStdString(deliveryorder.getDeliveryAddress()) + "')");
-    if (qry.exec())
+    if (qry.exec()){
         QMessageBox::critical(this, tr("Save"), tr("Saved"));
+        this->close();
+    }
     else
         QMessageBox::critical(this, tr("error::"), tr("OrderID exists!"));}
     else {

@@ -9,6 +9,8 @@ UpdateEmployee::UpdateEmployee(QWidget *parent)
     , ui(new Ui::UpdateEmployee)
 {
     ui->setupUi(this);
+    QIcon icon("C:/Users/HP/Downloads/windowicon.png");
+    setWindowIcon(icon);
 }
 
 UpdateEmployee::~UpdateEmployee()

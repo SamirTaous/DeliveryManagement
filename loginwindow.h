@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "mainwindow.h"
+#include "overview.h"
 namespace Ui {
 class LoginWindow;
 }
@@ -22,6 +23,7 @@ private slots:
 private:
     Ui::LoginWindow *ui;
     MainWindow *mainwindow;
+    Overview* overview;
 };
 
 #endif // LOGINWINDOW_H

@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     adddelivery.cpp \
     addemployee.cpp \
+    addlogin.cpp \
     deleteemployee.cpp \
     deliveryorder.cpp \
     deliverywidget.cpp \
@@ -21,11 +22,13 @@ SOURCES += \
     loginwindow.cpp \
     mainwindow.cpp \
     orderitem.cpp \
+    overview.cpp \
     updateemployee.cpp
 
 HEADERS += \
     adddelivery.h \
     addemployee.h \
+    addlogin.h \
     deleteemployee.h \
     deliveryorder.h \
     deliverywidget.h \
@@ -35,17 +38,20 @@ HEADERS += \
     loginwindow.h \
     mainwindow.h \
     orderitem.h \
+    overview.h \
     updateemployee.h
 
 FORMS += \
     adddelivery.ui \
     addemployee.ui \
+    addlogin.ui \
     deleteemployee.ui \
     deliverywidget.ui \
     employewidget.ui \
     inventorywidget.ui \
     loginwindow.ui \
     mainwindow.ui \
+    overview.ui \
     updateemployee.ui
 
 # Default rules for deployment.
